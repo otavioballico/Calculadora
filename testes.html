@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- Inclua as bibliotecas CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+      /* Estilos personalizados */
+      .navbar-custom {
+        background-color: #2b1464;
+      }
+
+      .navbar-custom .nav-link {
+        color: white;
+      }
+
+      .navbar-custom .nav-link:hover {
+        color: white;
+        background-color: #3e1191;
+      }
+
+      .navbar-custom .btn-login {
+        background-color: #3e1191;
+        color: white;
+      }
+
+      .navbar-custom .btn-login:hover {
+        background-color: #290d54;
+      }
+
+      .navbar-custom .logo {
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+        <a class="navbar-brand logo" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Saiba Mais</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre Mim</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-login" href="#">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div style="background-color: #290d54;">
+      <footer>
+        <p>Acompanhe nas redes sociais:</p>
+        <div class="social-media-icons">
+          <a href="https://www.facebook.com/seuperfil" target="_blank">
+            <img src="img/face.png" width="30px" height="30px" alt="Facebook">
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=seunumerodetelefone" target="_blank">
+            <img src="img/whatts.png" width="30px" height="30px" alt="WhatsApp">
+          </a>
+          <a href="https://www.linkedin.com/in/seuperfil" target="_blank">
+            <img src="img/in.png" width="30px" height="30px" alt="LinkedIn">
+          </a>
+        </div>
+      </footer>
+    </div>
+    <!-- Inclua a biblioteca JavaScript do Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+
+</html>

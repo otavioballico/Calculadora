@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="img/image.png" type="image/x-icon">
+    <title>Calculators - The Business Tool</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+        <img src="img/image.png" alt="" width="85" height="70" style="padding-right: 15px;">
+        <a class="navbar-brand logo" href="#" style="font-size: 30px;"> Calculators - The Business Tool </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item" style="padding-right: 15px;">
+              <a class="nav-link" href="#" style="font-size: 20px; ">Controle de Fluxo de Caixa</a>
+            </li>
+            <li class="nav-item" style="padding-right: 15px;">
+              <a class="nav-link" href="sobreIndex.html" style="font-size: 20px;">Sobre Mim</a>
+            </li>
+            <li class="nav-item">
+              <div class="btn-group">
+                <div class="dropdown">
+                  <button class="nav-link" style="font-size: 20px;" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img src="img/pessoa.png"
+                      width="40" height="40" style="margin-top: -10px;">
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="indexLogin.html">Logar</a>
+                    <a class="dropdown-item" href="indexCadastro.html">Cadastre-se</a>
+                  </div>
+                </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="calcConteinerMaster">
+      <div class="calcConteiner">
+        <div class="container">
+          <h2>Calculadora de Juros</h2>
+          <form id="calculator-form">
+            <div class="form-group">
+              <label for="valor-inicial">Valor Inicial:</label>
+              <input type="number" class="form-control" id="valor-inicial" placeholder="Digite o valor inicial">
+            </div>
+            <div class="form-group">
+              <label for="taxa-juros">Taxa de Juros (%):</label>
+              <input type="number" class="form-control" id="taxa-juros" placeholder="Digite a taxa de juros">
+            </div>
+            <div class="form-group">
+              <label for="valor-mensal">Valor Mensal:</label>
+              <input type="number" class="form-control" id="valor-mensal" placeholder="Digite o valor mensal">
+            </div>
+            <div class="form-group">
+              <label for="periodo">Período:</label>
+              <div class="input-group">
+                <input type="number" class="form-control" id="periodo" placeholder="Digite o período">
+                <select class="form-control" id="periodo-unidade">
+                  <option value="meses">Meses</option>
+                  <option value="anos">Anos</option>
+                </select>
+              </div>
+            </div><br>
+            <button type="button" class="btn btn-primary" style="background-color:  #3e1191;
+            color: white; border: white;" id="calcular">Calcular</button>
+          </form>
+          <div id="resultado"></div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div id="vermelho" class="conteinerMaster2">
+      <div id="azul" class="conteinerMaster">
+        <h2 id="scrollspyHeading1" style="color: #282447;"><b>Como utilizar a calculadora de juros compostos</b></h2>
+        <p>
+        <h5>
+          <li>Preencha o campo valor inicial;</li><br>
+        </h5>
+        <h5>
+          <li> Preencha o campo valor mensal (Será somado ao final de cada ciclo);</li><br>
+        </h5>
+        <h5>
+          <li> Preencha a taxa de juros anual ou mensal;</li><br>
+        </h5>
+        <h5>
+          <li> Preencha o campo período por meses ou anos;</li><br>
+        </h5>
+        <h5>
+          <li> Clique em calcular e veja o resultado.</li><br>
+        </h5>
+        <h5> Viu como é simples? Agora é só fazer suas simulações utilizando nossa calculadora de juros.<br>
+          </p>
+        </h5><br><br>
+        <h2 id="scrollspyHeading2" style="color: #282447;"><b>Como funciona a fórmula de juros compostos?</b></h2>
+        <p>
+          <br>Juros compostos ou simplesmente juros sobre juros é calculado utilizando a seguinte fórmula:<br><br>
+          <b>
+            <h3 style="text-align: center;">A = P (1 + i) ^ t</h3>
+          </b>
+          <br><br>
+        <div>
+          <li>Para entender melhor a fórmula segue a explicação de cada variável: </li>
+        </div>
+        <br>
+        <div>
+          <li><b> A</b> = valor final, ou seja, o resultado que você terá;</li>
+        </div>
+        <br>
+        <div>
+          <li> <b>P</b> = valor inicial depositado; </li><br>
+        </div>
+        <div>
+          <li> <b>i</b> = taxa de juros;</li>
+        </div><br>
+        <div>
+          <li> <b>t</b> = tempo do investimento.</li>
+        </div><br>
+        <li> É importante lembrar que a taxa de juros e o tempo devem estar na mesma unidade. Por exemplo, se você quer
+          utilizar a fórmula para simular um investimento que rende <b>0.5% ao mês</b>, na fórmula você deve utilizar os
+          períodos mensais, ou seja, se você quer simular 10 anos nessa taxa, então utilize 10×12 que são 120 no campo
+          <b>t</b>.<br></li>
+        <br> Pode parecer complicado entender juros compostos, por isso, vamos te ajudar de forma mais simples. Então,
+        suponha que você investiu <b>R$ 10.000,00</b> a uma taxa de 10% ao ano durante 5 anos.<br> No primeiro ano você
+        teria um rendimento de 10% que seria igual a <b>R$ 1.000,00</b>, totalizando assim um valor de R$11.000,00. Já
+        no segundo ano você teria o rendimento de 10% do valor de <b>R$ 11.000,00</b> e não mais do valor inicial, o
+        valor do rendimento sendo <b>R$ 1.100,00</b>.<br><br> Totalizando assim no final do segundo ano um valor de R$
+        <b>12.100,00. </b> Portanto, o valor do rendimento será sempre 10% do valor do último período e não em cima do
+        valor inicial, fazendo o efeito exponencial do juros sobre juros. No final você teria o valor de <b>R$
+          16.105,10</b>. </p>
+        <br>
+        <div class="tabela">
+          <img src="img/tabela.png">
+        </div><br><br>
+        <p>Note que a cada ano o valor ganho em juros aumenta mesmo sem nenhum novo aporte de dinheiro. Já no juros
+          simples, o juros incide somente no valor inicial. O total que você teria seria de R$ 15.000,00. Ou seja, uma
+          diferença de mais de 1 mil reais feitos pelo poder exponencial dos juros compostos.</p>
+        <h2 id="scrollspyHeading3"><b>Como calcular juros compostos</b></h2>
+        <p>Os juros compostos são a prática de juros sobre juros. Eles são, na maioria das vezes, usados no sistema
+          financeiro, pois oferecem maior rentabilidade se comparados ao juro simples. <br> Mas, um fato sobre os juros
+          compostos é simples: esse é um dos conceitos mais importantes de investimento que você precisa dominar.
+          <br><br> Juros é um conceito básico dentro de um bom planejamento financeiro pessoal. Um conceito que é
+          geralmente dominado por quem busca se aventurar dentro do mundo dos investimentos. <br> No entanto, a maioria
+          das pessoas tende a subestimar a forma como os juros trabalham com o dinheiro e acabam se atrapalhando na hora
+          de investir. <br><br> Vamos tentar explicar com um exemplo mais prático. Imagine-se nessa situação: você está
+          p egando dinheiro emprestado com seu amigo. Porém, como condição do empréstimo, você precisa devolver o
+          dinheiro somado de um determinado valor. <br><br> Esse excedente que vai ser pago ao credor (o amigo que
+          emprestou o dinheiro) é o que chamamos de juros. <br> Ou seja, o juro é a remuneração paga pelo empréstimo de
+          dinheiro. <br><br> Simples, concorda? Contudo, apesar de simples, muitos nutrem uma visão errada em relação a
+          esse assunto. <br> No universo das finanças, compreender bem o conceito de juros é importante para fazer com
+          que os seus investimentos tragam rendimento ao longo do tempo.</p>
+        <br><br>
+        <h2 id="scrollspyHeading4"><b>Juros simples e juros compostos</b></h2>
+        <p>No regime de juros simples, o percentual de juros (ou taxa) incide apenas sobre o capital inicial. Isso
+          significa que a remuneração sobre o dinheiro só incidirá sobre a quantia investida ou emprestada
+          inicialmente.<br><br> As principais diferenças entre juros simples e compostos são as seguintes:</p>
+        <h4>Juros simples</h4>
+        <p>São pagos periodicamente (mensal ou anualmente) ao credor;<br> ✓ São iguais ao longo do tempo, mas reduzem em
+          termos reais (efeito da inflação);<br> ✓ Nominalmente somados ao capital formariam uma reta (ex.: 1000, 1100,
+          1200 etc.);<br> ✓ São como os frutos de uma árvore: são colhidos e consumidos;<br> ✓ Tecnicamente, ocorre a
+          fruição imediata dos juros pelo credor;<br> ✓ Se não pagos e não incorporados ao montante, gera perda
+          inflacionária e da porcentagem de rendimento.<br></p>
+        <h4>Juros compostos</h4>
+        <p>São pagos ao credor somente no vencimento;<br> ✓ São crescentes no tempo em termos reais e nominais, se a
+          taxa for maior que a inflação;<br> ✓ Incorporados ao capital formam uma curva ascendente. (ex.: 1000, 1100,
+          1210 etc.);<br> ✓ Tecnicamente, ocorre a fruição diferida dos juros pelo credor;<br> ✓ Se pagos, não
+          incorporam ao montante, que não cresce durante o período em que forem pagos.<br><br> Juros compostos são a
+          aplicação de juros sobre juros, isto é, os juros compostos são aplicados ao montante de cada período.<br>
+        </p>
+        <h2 id="scrollspyHeading5">O poder do juros sobre juros</h2>
+        <p>Agora que você já aprendeu a calcular juros composto, então é importante fixar o poder transformador que os
+          juros sobre juros podem fazer a seu favor em seus investimentos. <br> Para isso basta reparar a imagem abaixo:
+          <br><br>
+        <div class="tabela">
+          <img src="img/poder.png">
+        </div>
+        <br> Como você pode ver, no longo prazo (mais de 15 anos) é onde você vai colher os maiores benefícios do juros
+        compostos.<br><br> Como dizia Albert Einstein:<br>
+        <div class="container">
+          <blockquote class="blockquote text-center">
+            <p id="quote"> “Os juros compostos são a força mais poderosa do universo e a maior invenção da humanidade,
+              porque permitem uma confiável e sistemática acumulação de riqueza”</p>
+            <footer class="blockquote-footer" id="author">Albert Einstein</footer>
+          </blockquote>
+        </div>
+        </p>
+      </div>
+      <div class="vertical-line"></div>
+      <div id="rosa" class="newsletterConteiner">
+        <div>
+          <h2>Saiba Mais Sobre: </h2><br>
+          <a target="_blank" class="btn btn-primary"
+            href="https://brasilescola.uol.com.br/matematica/juros-compostos.htm" style="background-color:  #3e1191;
+        color: white; border: white;" style="font-size: 20px;">Juros Compostos</a>
+          <a target="_blank" href="https://brasilescola.uol.com.br/matematica/juros-simples.htm" type="button"
+            class="btn btn-primary" style="background-color:  #3e1191;
+        color: white; border: white;">Juros Simples</a>
+          <a target="_blank"
+            href="https://www.pontotel.com.br/ferias/#:~:text=As%20f%C3%A9rias%20s%C3%A3o%20um%20per%C3%ADodo,junto%20ao%20acr%C3%A9scimo%20de%20f%C3%A9rias."
+            type="button" class="btn btn-primary" style="background-color:  #3e1191;
+        color: white; border: white;">Férias</a>
+          <a target="_blank" href="https://www.creditas.com/exponencial/qual-o-rendimento-da-poupanca-hoje/"
+            type="button" class="btn btn-primary" style="background-color:  #3e1191;
+        color: white; border: white;">Rendimento da Poupança</a>
+          <a target="_blank" href="https://www.nuinvest.com.br/investimentos.html" type="button" class="btn btn-primary"
+            style="background-color:  #3e1191;
+        color: white; border: white;">Investimento</a>
+          <a target="_blank" href="https://www.infomoney.com.br/guias/decimo-terceiro-salario/" type="button"
+            class="btn btn-primary" style="background-color:  #3e1191;
+        color: white; border: white;">Décimo Terceiro</a>
+          <a target="_blank" href="https://www.fgts.gov.br/Pages/default.aspx" type="button" class="btn btn-primary"
+            style="background-color:  #3e1191;
+        color: white; border: white;">FGTS</a>
+          <a target="_blank" href="https://www.idinheiro.com.br/calculadoras/calculadora-rescisao/" type="button"
+            class="btn btn-primary" style="background-color:  #3e1191;
+        color: white; border: white;">Rescisão</a>
+          <a target="_blank"
+            href="https://mundoeducacao.uol.com.br/matematica/porcentagem.htm#:~:text=Porcentagem%2C%20representada%20pelo%20s%C3%ADmbolo%20%25%2C,forma%20fracion%C3%A1ria%20e%20forma%20decimal."
+            type="button" class="btn btn-primary" style="background-color:  #3e1191;
+        color: white; border: white;">Porcentagem</a>
+        </div>
+      </div>
+    </div>
+    <div>
+    </div>
+    <div style="background-color: #2b1464;">
+      <footer class="bg-purple text-light">
+        <div class="container py-5">
+          <div style="text-align: right; ">
+            <p style="font-size: 20px;"><b>Acompanhe nas redes sociais:</b></p>
+            <div class="social-media-icons">
+              <a style=" color: #2b1464;" href=" https://www.facebook.com/">
+                <img src="img/face.png" width="30px" height="30px" alt="Facebook">
+              </a>
+              <a style="margin-left: 10px; color: #2b1464;" href="https://wa.me/19993209946">
+                <img src="img/whatts.png" width="30px" height="30px" alt="WhatsApp">
+              </a>
+              <a style="margin-left: 10px;" href="https://www.linkedin.com/in/otavioballico/">
+                <img src="img/in.png" width="30px" height="30px" alt="LinkedIn">
+              </a>
+            </div>
+          </div>
+          <div class="linha-horizontal"></div><br>
+          <div class="row">
+            <!-- Transformar em botoes -->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h5>Inspiração para Criação</h5>
+              <ul class="list-unstyled">
+                <li><a target="_blank" href="https://www.mobills.com.br/calculadoras/calculadora-juros-compostos/"
+                    class="itenRodape">Mobills</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h5>Institucional</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="itenRodape">Home</a></li>
+                <li><a href="#" class="itenRodape">Sobre Mim</a></li>
+                <li><a href="#" class="itenRodape">Saiba Mais</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h5>Termos e Privacidade</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="itenRodape">Seja nosso Parceiro</a></li>
+                <li><a href="#" class="itenRodape">Políticas e Regras internas</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <h5>Ajuda</h5>
+              <ul class="list-unstyled">
+                <li>Atendimento Whatsapp: 19 99320-9946</li>
+                <li>Imprensa: otavioBusiness@gmail.com</li>
+                <li>Consultoria: jpBusiness@gmail.com</li>
+              </ul>
+            </div>
+            <br>
+          </div>
+          <br>
+          <div class="linha-horizontal"></div><br>
+          <h6>Site Criado totalmente para aprendizado, não possui nenhum valor comercial :D</h6>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+</html>
